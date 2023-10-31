@@ -26,12 +26,10 @@ int main()
             if (input[k] >= 'A' && input[k] <= 'Z')
             {
                 letterCount[(int)input[k] - 65]++;
-                printf("%c, %d\n", input[k], letterCount[(int)input[k] - 65]);
             }
             if (input[k] >= 'a' && input[k] <= 'z')
             {
                 letterCount[(int)input[k] - 97]++;
-                printf("%c, %d\n", input[k], letterCount[(int)input[k] - 97]);
             }
         }
     }
