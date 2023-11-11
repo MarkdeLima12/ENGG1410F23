@@ -5,15 +5,18 @@
  */
 
 #include <stdio.h>
-
-int main()
+long sum(long *, int);
+int main(void)
 {
-    long v[6] = {1, 2, 3, 4, 5, 6};
-    long *p;
-    p = v;
-    printf("%ld\n", *p++);
-    p++;
-    printf("%ld\n", *p);
-    p += 2;
-    printf("%ld\n", *p);
+    long primes[6] = {1, 2, 3, 5, 7, 11};
+    printf("%li\n", sum(primes, 6));
+    return 0;
+}
+long sum(long *p, int sz)
+{
+    long *end = p + sz;
+    long total = 0;
+    while (p < end)
+        total += *p++;
+    return total;
 }
